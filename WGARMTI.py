@@ -54,11 +54,10 @@ for token in tokens:
 
         if save_guild_id and save_guild_name:
             result_text += f"{guild_id} - {guild_name}\n"
-
-if reset_results_file:
-  results_file = open(results_file_name, "w", encoding="utf8", errors="ignore")
-else:
-  results_file = open(results_file_name, "a", encoding="utf8", errors="ignore")
-
-results_file.write(result_text)
-results_file.close()
+        if reset_results_file:
+          results_file = open(results_file_name, "w", encoding="utf8", errors="ignore")
+        else:
+          results_file = open(results_file_name, "a", encoding="utf8", errors="ignore")
+        results_file.write(result_text)
+        results_file.close()
+ 
